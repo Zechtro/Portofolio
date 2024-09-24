@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+body {
+    margin: 0px;
+    background-color: #3D3B40;
+    color: #FAF7F0;
+    overflow-x: hidden;
+
+    font-family: "EB Garamond", serif;
+}
+
+.container-section {
+    /* border-style: solid;
+    border-color: #FFFFFF;
+    border-width: 5px; */
+}
+
+#navbar-mobile, #navbar-open, #li-navbar-close {
+    display: none
+}
+
+@media screen and (max-width: 480px) {
+    /* Smartphone */
+    /* Styles for small screens */
+    /* Tes: Galaxy S5 & iPhone 12 Pro*/
+
+    h1 {
+        font-size:60px;
+        margin: 0px;
+    }
+    
+    h2 {
+        font-size: 40px;
+        color: #FAF7F0;
+    }
+    
+    h3 {
+        font-size: 20px;
+        margin: 0px;
+    }
+    
+    nav {
+        height: 50px;
+        width: 100vw;
+        position: fixed;
+        display: flex;
+        justify-content: end;
+        /* align-items: center; */
+        background-color: #3D3B40;
+        border-bottom: 1px solid #FAF7F0;
+    }
+    
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-color: #3D3B40;
+        padding-left: 5vw;
+        transition: 0.75 ease-out;
+    }
+    
+    nav ul {
+        display: none;
+        list-style-type: none;
+        z-index: 10;
+    }
+
+    #navbar-open, #navbar-close {
+        display: block
+    }
+
+    #navbar-open {
+        margin-right: 5vw;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        position:fixed;
+    }
+
+    #li-navbar-close {
+        display: flex;
+        justify-content: end;
+        padding-top: 20px;
+    }
+
+    #navbar-mobile:checked ~ ul {
+        display: flex;
+    }
+
+    #navbar-mobile:checked ~ #overlay {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top:0;
+        left:0;
+    }
+
+    #navbar-open, #navbar-close {
+        margin-right: 10vw;
+        font-size: 20px;
+    }
+
+    #li-navbar-close:hover {
+        color: #A04747;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    nav li {
+        padding-right: 30vw;
+        background-color: #3D3B40;
+        padding-top: 50px;
+        width: 100%;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #FAF7F0;
+        font-size: 25px;
+    }
+    
+    nav a:hover {
+        color: #D8D2C2;
+    }
+    
+    #hero-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+        width:600px;
+        margin-top: 15vh;
+        
+        color: rgb(61, 59, 64);
+    }
+
+    #hero-title > h1 {
+        width:500px;
+    }
+
+    #hero-title > h3 {
+        width:210px;
+    }
+    
+    main {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+        width: 100vw;
+    
+        overflow-x: hidden;
+    
+    }
+    
+    .hero-section {
+        background-image: linear-gradient(to top, rgb(227,219,217,1) 15%, rgb(255,255,255,0.1) 79%, rgb(227,219,217,1)), url("../asset/img/StevenTjhia.jpg");
+        background-size: cover;
+        /* background-repeat: no-repeat; */
+        background-position: -200px 100px;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: start;
+        overflow-x: hidden;
+    
+        background-attachment: fixed;
+    
+        scroll-snap-align: start;
+    }
+    
+    .container-section {
+        height: 100vh;
+        padding-left: 60px;
+        padding-right: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        scroll-snap-align: start;
+    }
+
+    #about-me {
+        background-image: linear-gradient(to right, rgb(61, 59, 64), rgb(61, 59, 64, 0.5), rgb(61, 59, 64)), url("../asset/img/Ven.jpg");
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: auto 100vh;
+        background-position: right;
+
+        background-attachment: fixed;
+    }
+    
+    .container-section p {
+        display: flex;
+       font-size: 13px;
+       text-align: justify;
+    }
+    
+    .container-section h2 {
+        margin-top: 5vh;
+        margin-bottom: 2vh;
+        height: 15vh;
+    }
+    
+   .container-section header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+   .container-section h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    
+    footer {
+        height: 35px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Tablet */
+    /* Styles for medium screens */
+    /* Tes: iPad Air & iPad Mini */
+    /* Hero & About Me tidak ada perubahan dengan yang laptop */
+
+    h1 {
+        font-size:80px;
+        margin: 0px;
+    }
+    
+    h2 {
+        font-size: 30px;
+        color: #FAF7F0;
+    }
+    
+    h3 {
+        font-size: 15px;
+        margin: 0px;
+    }
+    
+    nav {
+        height: 50px;
+        width: 100vw;
+        position: fixed;
+        display: block;
+        background-color: #3D3B40;
+        border-bottom: 1px solid #FAF7F0;
+    }
+    
+    nav > ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    nav ul {
+        list-style-type: none;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #FAF7F0;
+    }
+    
+    nav a:hover {
+        color: #D8D2C2;
+    }
+    
+    #hero-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 130px;
+        width:420px;
+        
+        color: rgb(61, 59, 64);
+    }
+
+    #hero-title > h3 {
+        width:300px;
+    }
+    
+    main {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+        width: 100vw;
+    
+        overflow-x: hidden;
+    
+    }
+    
+    .hero-section {
+        background-image: linear-gradient(to right, rgb(255,255,255,0.4), rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia.jpg");
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        overflow-x: hidden;
+    
+        background-attachment: fixed;
+    
+        scroll-snap-align: start;
+    }
+    
+    .container-section {
+        height: 100vh;
+        padding-left: 100px;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        scroll-snap-align: start;
+    }
+    
+    #about-me {
+        background-image: linear-gradient(to right, rgb(61, 59, 64) 50%, rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia_AboutMe.jpg");
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: auto 100vh;
+        background-position: right;
+
+        background-attachment: fixed;
+    }
+    
+    .container-section p {
+       font-size: 2vh;
+       text-align: justify;
+    }
+    
+    .container-section h2 {
+        margin-top: 10vh;
+        margin-bottom: 2vh;
+        height: 15vh;
+    }
+    
+    #about-me p {
+        width: 55vw;
+    }
+    
+    footer {
+        height: 35px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    /* Laptop */
+    /* Styles for large screens */
+    /* Test: 1046 x 524 */
+    
+    h1 {
+        font-size:80px;
+        margin: 0px;
+    }
+    
+    h2 {
+        font-size: 30px;
+        color: #FAF7F0;
+    }
+    
+    h3 {
+        font-size: 15px;
+        margin: 0px;
+    }
+    
+    nav {
+        height: 50px;
+        width: 100vw;
+        position: fixed;
+        display: block;
+        background-color: #3D3B40;
+        border-bottom: 1px solid #FAF7F0;
+    }
+    
+    nav > ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    nav ul {
+        list-style-type: none;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #FAF7F0;
+    }
+    
+    nav a:hover {
+        color: #D8D2C2;
+    }
+    
+    #hero-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 130px;
+        width:420px;
+        
+        color: rgb(61, 59, 64);
+    }
+
+    #hero-title > h3 {
+        width:300px;
+    }
+    
+    main {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+        width: 100vw;
+    
+        overflow-x: hidden;
+    
+    }
+    
+    .hero-section {
+        background-image: linear-gradient(to right, rgb(255,255,255,0.4), rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia.jpg");
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        overflow-x: hidden;
+    
+        background-attachment: fixed;
+    
+        scroll-snap-align: start;
+    }
+    
+    .container-section {
+        height: 100vh;
+        padding-left: 100px;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        scroll-snap-align: start;
+    }
+    
+    #about-me {
+        background-image: linear-gradient(to right, rgb(61, 59, 64) 50%, rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia_AboutMe.jpg");
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: auto 100vh;
+        background-position: right;
+
+        background-attachment: fixed;
+    }
+    
+    .container-section p {
+       font-size: 2vh;
+       text-align: justify;
+    }
+    
+    .container-section h2 {
+        margin-top: 10vh;
+        margin-bottom: 2vh;
+        height: 15vh;
+    }
+    
+    #about-me p {
+        width: 55vw;
+    }
+    
+    footer {
+        height: 35px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* current dekstop */
+    /* Styles for extra large screens */
+    /* Test: original desktop */
+    
+    h1 {
+        font-size:100px;
+        margin: 0px;
+    }
+    
+    h2 {
+        font-size: 50px;
+        color: #FAF7F0;
+    }
+    
+    h3 {
+        font-size: 25px;
+        margin: 0px;
+    }
+    
+    nav {
+        height: 50px;
+        width: 100vw;
+        position: fixed;
+        display: block;
+        background-color: #3D3B40;
+        border-bottom: 1px solid #FAF7F0;
+    }
+    
+    nav > ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    nav ul {
+        list-style-type: none;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #FAF7F0;
+    }
+    
+    nav a:hover {
+        color: #D8D2C2;
+    }
+    
+    #hero-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 130px;
+        width:540px;
+        
+        color: rgb(61, 59, 64);
+    }
+    
+    main {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+        width: 100vw;
+    
+        overflow-x: hidden;
+    
+    }
+    
+    .hero-section {
+        background-image: linear-gradient(to right, rgb(255,255,255,0.4), rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia.jpg");
+        background-size: cover;
+        background-position: 0px -150px;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        overflow-x: hidden;
+    
+        background-attachment: fixed;
+    
+        scroll-snap-align: start;
+    }
+    
+    .container-section {
+        height: 100vh;
+        padding-left: 100px;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        scroll-snap-align: start;
+    }
+    
+    #about-me {
+        background-image: linear-gradient(to right, rgb(61, 59, 64) 50%, rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia_AboutMe.jpg");
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: auto 100vh;
+        background-position: right;
+
+        background-attachment: fixed;
+    }
+    
+    .container-section p {
+       font-size: 20px;
+       text-align: justify;
+    }
+    
+    .container-section h2 {
+        margin-top: 10vh;
+        margin-bottom: 2vh;
+        height: 15vh;
+    }
+    
+    #about-me p {
+        width: 55vw;
+    }
+    
+    footer {
+        height: 35px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+    }
+}
