@@ -9,14 +9,189 @@ body {
     font-family: "EB Garamond", serif;
 }
 
-.container-section {
-    /* border-style: solid;
-    border-color: #FFFFFF;
-    border-width: 5px; */
+a {
+    text-decoration: none;
+}
+
+nav {
+    z-index: 10;
 }
 
 #navbar-mobile, #navbar-open, #li-navbar-close {
     display: none
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+
+#skills {
+    height: 350vh;
+    align-items: center;
+}
+
+#skills h2 {
+    margin-top: 0px;
+    height: 10vh;
+}
+
+#skills h3 {
+    margin-top: 2vh;
+}
+
+#softeng-skills {
+    height: 200vh;
+}
+
+#lang-skills {
+    height: 100vh;
+}
+
+#softeng-skills, #lang-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#softeng-skills div, #lang-skills div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    height: 12.5vw;
+    width: 12.5vw;
+    margin: 2.5vw;
+}
+
+#lang-skills div {
+    height: 15vw;
+    width: 15vw;
+    margin: 1vw 5vw;
+}
+
+#softeng-skills img, #lang-skills img {
+    object-fit: contain;
+    height: 10vw;
+    width: 10vw;
+    padding: 1vw;
+    background-color: #181C14;
+    border-radius: 15px;
+}
+
+#lang-skills img {
+    padding: 0.5vw;
+}
+
+.container-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+#skill-icons {
+    align-items: center;
+    height: 300vh;
+}
+
+#softeng-skills div, #lang-skills div {
+    position: relative;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+#softeng-skills div::after, #softeng-skills div::before, #lang-skills div::after, #lang-skills div::before {
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle) ,transparent, #006AFF);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 16px;
+    animation: 1.5s spin linear infinite;
+}
+
+.project {
+    position: relative;
+}
+
+.project::before, .project::after {
+    content:'';
+    position: absolute;
+    height: 102%;
+    width: 102%;
+    background-image: conic-gradient(from var(--angle), #006AFF ,transparent, #006AFF);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 10vw 0px 10vw 0px;
+    animation: 1.5s spin linear infinite;
+    filter: blur(1.5rem);
+    opacity: 0.6;
+}
+
+.project:hover::before {
+    background-image: conic-gradient(from var(--angle), #FF4545, #00FF99, #006AFF, #FF0095, #FF4545);
+}
+
+#softeng-skills div:hover {
+    background-image: conic-gradient(from var(--angle), #FF4545, #00FF99, #006AFF, #FF0095, #FF4545);
+    border-radius: 16px;
+    animation: 1.5s spin linear infinite;
+}
+
+#lang-skills div::after, #lang-skills div::before {
+    height: 77%;
+    width: 77%;
+    background-image: conic-gradient(from var(--angle), #FF4545, #00FF99, #006AFF, #FF0095, #FF4545);
+    border-radius: 18px;
+}
+
+#softeng-skills div::before, #lang-skills div::before {
+    filter: blur(1.5rem);
+    opacity: 0.6;
+}
+
+footer {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    background-color: #3D3B40;
+    color: #FAF7F0;
+    border-top: #FAF7F0 solid;
 }
 
 @media screen and (max-width: 480px) {
@@ -45,7 +220,6 @@ body {
         position: fixed;
         display: flex;
         justify-content: end;
-        /* align-items: center; */
         background-color: #3D3B40;
         border-bottom: 1px solid #FAF7F0;
     }
@@ -112,9 +286,8 @@ body {
         padding-top: 50px;
         width: 100%;
     }
-    
+
     nav a {
-        text-decoration: none;
         color: #FAF7F0;
         font-size: 25px;
     }
@@ -149,13 +322,11 @@ body {
         width: 100vw;
     
         overflow-x: hidden;
-    
     }
     
     .hero-section {
-        background-image: linear-gradient(to top, rgb(227,219,217,1) 15%, rgb(255,255,255,0.1) 79%, rgb(227,219,217,1)), url("../asset/img/StevenTjhia.jpg");
+        background-image: linear-gradient(to top, rgb(227,219,217,1) 15%, rgb(255,255,255,0.1) 79%, rgb(227,219,217,1)), url("../asset/img/StevenTjhia.webp");
         background-size: cover;
-        /* background-repeat: no-repeat; */
         background-position: -200px 100px;
         height: 100vh;
         width: 100vw;
@@ -180,7 +351,7 @@ body {
     }
 
     #about-me {
-        background-image: linear-gradient(to right, rgb(61, 59, 64), rgb(61, 59, 64, 0.5), rgb(61, 59, 64)), url("../asset/img/Ven.jpg");
+        background-image: linear-gradient(to right, rgb(61, 59, 64), rgb(61, 59, 64, 0.5), rgb(61, 59, 64)), url("../asset/img/Ven.webp");
         object-fit: cover;
         background-repeat: no-repeat;
         background-size: auto 100vh;
@@ -222,6 +393,54 @@ body {
         justify-content: center;
         align-items: center;
         scroll-snap-align: start;
+    }
+
+    #skills {
+        height: auto;
+        height: 115vh;
+        justify-content: start;
+    }
+
+    #skills h2 {
+        margin-top: 32px;
+        margin-bottom: 0px;
+    }
+
+    #skills h3 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    #softeng-skills, #lang-skills {
+        height: auto;
+        border-radius: 20px;
+        overflow-y: scroll;
+        height: 30vh;
+        padding: 15px;
+    }
+
+    #softeng-skills div, #lang-skills div {
+        height: 25vw;
+        width: 25vw;
+    }
+
+    #lang-skills div {
+        margin: 2.5vw;
+    }
+
+    #softeng-skills img, #lang-skills img {
+        height: 20vw;
+        width: 20vw;
+        padding: 1.5vw;
+    }
+    
+    #skill-icons {
+        height: auto;
+    }
+
+    #lang-skills div::after, #lang-skills div::before {
+        height: 100%;
+        width: 100%;
     }
 }
 
@@ -265,7 +484,6 @@ body {
     }
     
     nav a {
-        text-decoration: none;
         color: #FAF7F0;
     }
     
@@ -298,7 +516,7 @@ body {
     }
     
     .hero-section {
-        background-image: linear-gradient(to right, rgb(255,255,255,0.4), rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia.jpg");
+        background-image: linear-gradient(to right, rgb(255,255,255,0.4), rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia.webp");
         background-size: cover;
         height: 100vh;
         width: 100vw;
@@ -323,7 +541,7 @@ body {
     }
     
     #about-me {
-        background-image: linear-gradient(to right, rgb(61, 59, 64) 50%, rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia_AboutMe.jpg");
+        background-image: linear-gradient(to right, rgb(61, 59, 64) 50%, rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia_AboutMe.webp");
         object-fit: cover;
         background-repeat: no-repeat;
         background-size: auto 100vh;
@@ -396,7 +614,6 @@ body {
     }
     
     nav a {
-        text-decoration: none;
         color: #FAF7F0;
     }
     
@@ -429,7 +646,7 @@ body {
     }
     
     .hero-section {
-        background-image: linear-gradient(to right, rgb(255,255,255,0.4), rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia.jpg");
+        background-image: linear-gradient(to right, rgb(255,255,255,0.4), rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia.webp");
         background-size: cover;
         height: 100vh;
         width: 100vw;
@@ -454,7 +671,7 @@ body {
     }
     
     #about-me {
-        background-image: linear-gradient(to right, rgb(61, 59, 64) 50%, rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia_AboutMe.jpg");
+        background-image: linear-gradient(to right, rgb(61, 59, 64) 50%, rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia_AboutMe.webp");
         object-fit: cover;
         background-repeat: no-repeat;
         background-size: auto 100vh;
@@ -509,7 +726,7 @@ body {
     }
     
     nav {
-        height: 50px;
+        height: 55px;
         width: 100vw;
         position: fixed;
         display: block;
@@ -527,7 +744,6 @@ body {
     }
     
     nav a {
-        text-decoration: none;
         color: #FAF7F0;
     }
     
@@ -556,7 +772,7 @@ body {
     }
     
     .hero-section {
-        background-image: linear-gradient(to right, rgb(255,255,255,0.4), rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia.jpg");
+        background-image: linear-gradient(to right, rgb(255,255,255,0.4), rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia.webp");
         background-size: cover;
         background-position: 0px -150px;
         height: 100vh;
@@ -582,7 +798,7 @@ body {
     }
     
     #about-me {
-        background-image: linear-gradient(to right, rgb(61, 59, 64) 50%, rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia_AboutMe.jpg");
+        background-image: linear-gradient(to right, rgb(61, 59, 64) 50%, rgb(255,255,255,0.1)), url("../asset/img/StevenTjhia_AboutMe.webp");
         object-fit: cover;
         background-repeat: no-repeat;
         background-size: auto 100vh;
@@ -607,11 +823,110 @@ body {
     }
     
     footer {
-        height: 35px;
-        margin-bottom: 30px;
+        font-size: 30px;
+    }
+
+    #projects {
+        height: auto;
+    }
+
+    #project-list {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .project {
+        width: 80vw;
+        height: 70vh;
+        background-image: linear-gradient(to top right, rgb(90, 114, 160, 1), rgb(61, 59, 64));
+
         display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        padding: 1vw;
+        margin-bottom: 5vw;
+
+        border-radius: 10vw 15px 10vw 15px;
+    }
+
+    .even-project {
+        background-image: linear-gradient(to bottom left, rgb(90, 114, 160, 1), rgb(61, 59, 64));
+    }
+
+    .project-detail {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 40vw;
+    }
+
+    .thumbnail {
+        width: 30vw;
+        height: 30vw;
+        display:flex;
         justify-content: center;
         align-items: center;
-        scroll-snap-align: start;
+    }
+
+    .thumbnail-project {
+        object-fit: contain;
+        height: 30vw;
+        width: 30vw;
+    }
+
+    .tech-used-icons {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .project-detail .project-title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .button-visit-project, .button-view-project {
+        background-color: #54C392;
+        color: #FAF7F0;
+        width: 10vw;
+        text-align: center;
+        padding: 1vw;
+        margin-top: 3vw;
+        border-radius: 15px;
+    }
+
+    .button-visit-project:hover {
+        background-color: #468585;
+    }
+
+    .button-view-project {
+        background-color: #FFDC7F;
+        color: #3D3B40;
+        margin-top: 2vw;
+    }
+
+    .button-view-project:hover {
+        background-color: #FFAD60;
+    }
+
+    .contact {
+        width: 70vw;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .contact a {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 }

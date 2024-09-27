@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Steven Tjhia</title>
-        <meta name="description" content="">
+        <meta name="description" content="Portofolio Website of Steven Tjhia">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="index.css">
     </head>
@@ -17,11 +17,10 @@
                 <label id="overlay" for="navbar-mobile"></label>
                 <ul>
                     <li id="li-navbar-close"><label id="navbar-close" for="navbar-mobile">X</label></li>
-                    <li><a href="#about-me">About Me</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experience">Experience</a></li>
+                    <li style="font-size: large;"><a href="#about-me">About Me</a></li>
+                    <!-- <li><a href="#experience">Experience</a></li> -->
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li> 
                 </ul>
             </nav>
         </header>
@@ -37,11 +36,10 @@
 
             <!-- About Me -->
             <section id="about-me" class="container-section">
-                <!-- <div> -->
                     <header>
                         <h2>About Me</h2>
                     </header>
-                    <div class="container-content">
+                    <div id="about-me-content" class="container-content">
                         <p>
                             I'm a passionate undergraduate pursuing a degree in Informatics Engineering at Institut Teknologi Bandung. With a strong foundation in computer science, I'm dedicated to developing innovative solutions and pushing the boundaries of technology.
 
@@ -54,10 +52,6 @@
                             I am eager to expand my skills and apply my knowledge in real-world scenarios, continually seeking opportunities for growth and learning. I’m passionate about technology and its potential to make a positive impact, and I look forward to contributing to exciting projects in the future.
                         </p>
                     </div>
-                <!-- </div>
-                <div>
-                    <img id="img-about-me" src="../asset/img/StevenTjhia_AboutMe.jpg"/>
-                </div> -->
             </section> 
 
             <!-- Skills -->
@@ -65,14 +59,93 @@
                 <header>
                     <h2>Skills</h2>
                 </header>
-                <div class="container-content">
-                    <p>
-                        zzzz
-                    </p>
+                <div id="skill-icons" class="container-content">
+                    <h3>Software Engineering</h3>
+                    <div id="softeng-skills">
+                        <div>
+                            <img src="../asset/img/html5.webp" alt="html5"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/css3.webp" alt="css"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/js.webp" alt="javascript"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/reactjs.webp" alt="reactjs"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/tailwindcss.webp" alt="tailwindcss"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/typescript.webp" alt="typescript"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/firebase.webp" alt="firebase"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/express.webp" alt="express"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/remix.webp" alt="remixjs"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/go.webp" alt="go"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/nextjs.webp" alt="nextjs"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/django.webp" alt="django"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/mysql.webp" alt="mysql"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/postgresql.webp" alt="postgresql"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/prisma.webp" alt="prisma"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/pwa.webp" alt="progressive web app"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/figma.webp" alt="figma"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/git.webp" alt="git"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/docker.webp" alt="docker"/>
+                        </div>
+                    </div>
+                    <h3>Programming Language</h3>
+                    <div id="lang-skills">
+                        <div>
+                            <img src="../asset/img/python.webp" alt="python"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/go.webp" alt="go"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/c++.webp" alt="c++"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/c.webp" alt="c"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/csharp.webp" alt="c#"/>
+                        </div>
+                        <div>
+                            <img src="../asset/img/java.webp" alt="java"/>
+                        </div>
+                    </div>
                 </div>
             </section> 
 
             <!-- Experience -->
+            <!--
             <section id="experience" class="container-section">
                 <header>
                     <h2>Experience</h2>
@@ -83,31 +156,167 @@
                     </p>
                 </div>
             </section> 
+            -->
 
             <!-- Projects -->
             <section id="projects" class="container-section">
                 <header>
                     <h2>Projects</h2>
                 </header>
-                <div class="container-content">
-                    <p>
-                        zzzz
-                    </p>
+                <div id="project-list" class="container-content">
+                    <div class="project odd-project">
+                        <div class="thumbnail">
+                            <img class="thumbnail-project" src="../asset/thumbnail/Project_SeaSalon.webp" alt="Sea Salon"/>
+                        </div>
+                        <div class="project-detail">
+                            <p class="project-title">Sea Salon</p>
+                            <p>Tech Used</p>
+                            <div class="tech-used-icons">
+                                <div>
+                                    <img src="../asset/img/reactjs.webp" alt="python"/>
+                                </div>
+                                <div>
+                                    <img src="../asset/img/tailwindcss.webp" alt="python"/>
+                                </div>
+                                <div>
+                                    <img src="../asset/img/remix.webp" alt="python"/>
+                                </div>
+                                <div>
+                                    <img src="../asset/img/firebase.webp" alt="python"/>
+                                </div>
+                            </div>
+                            <a class="button-visit-project" href="https://sea-salon-seven.vercel.app">Visit Here</a>
+                            <a class="button-view-project" href="https://github.com/Zechtro/SEA_Salon">View Repo</a>
+                        </div>
+                    </div>
+                    <div class="project even-project">
+                        <div class="thumbnail">
+                            <img class="thumbnail-project" src="../asset/thumbnail/Project_Fingerprint.webp" alt="Fingerprint"/>
+                        </div>
+                        <div class="project-detail">
+                            <p class="project-title">Pattern Matching for Biometric Based Individual Detection Systems Using Fingerprint Images</p>
+                            <p>Tech Used</p>
+                            <div class="tech-used-icons">
+                                <div>
+                                    <img src="../asset/img/csharp.webp" alt="python"/>
+                                </div>
+                            </div>
+                            <a class="button-view-project" href="https://github.com/Zechtro/Tubes3_C-Insomniacs">View Repo</a>
+                        </div>
+                    </div>
+                    <div class="project odd-project">
+                        <div class="thumbnail">
+                            <img class="thumbnail-project" src="../asset/thumbnail/Project_Wikirace.webp" alt="Wikirace"/>
+                        </div>
+                        <div class="project-detail">
+                            <p class="project-title">Wikirace</p>
+                            <p>Tech Used</p>
+                            <div class="tech-used-icons">
+                                <div>
+                                    <img src="../asset/img/reactjs.webp" alt="python"/>
+                                </div>
+                                <div>
+                                    <img src="../asset/img/tailwindcss.webp" alt="python"/>
+                                </div>
+                                <div>
+                                    <img src="../asset/img/go.webp" alt="python"/>
+                                </div>
+                                <div>
+                                    <img src="../asset/img/docker.webp" alt="python"/>
+                                </div>
+                            </div>
+                            <a class="button-view-project" href="https://github.com/Zechtro/Tubes2_AnaxaGOras">View Repo</a>
+                        </div>
+                    </div>
+                    <div class="project even-project">
+                        <div class="thumbnail">
+                            <img class="thumbnail-project" src="../asset/thumbnail/Project_Bezier.webp" alt="Bézier Curve"/>
+                        </div>
+                        <div class="project-detail">
+                            <p class="project-title">Constructing Bézier Curves with Divide and Conquer Based Midpoint Algorithm</p>
+                            <p>Tech Used</p>
+                            <div class="tech-used-icons">
+                                <div>
+                                    <img src="../asset/img/python.webp" alt="python"/>
+                                </div>
+                            </div>
+                            <a class="button-view-project" href="https://github.com/Zechtro/Tucil2_13522020_13522103">View Repo</a>
+                        </div>
+                    </div>
+                    <div class="project odd-project">
+                        <div class="thumbnail">
+                            <img class="thumbnail-project" src="../asset/thumbnail/Project_Cyberpunk.webp" alt="Cyberpunk 2077 Breach Protocol Solver"/>
+                        </div>
+                        <div class="project-detail">
+                            <p class="project-title">Cyberpunk 2077 Breach Protocol Solver</p>
+                            <p>Tech Used</p>
+                            <div class="tech-used-icons">
+                                <div>
+                                    <img src="../asset/img/python.webp" alt="python"/>
+                                </div>
+                            </div>
+                            <a class="button-view-project" href="https://github.com/Zechtro/Tucil1_13522103">View Repo</a>
+                        </div>
+                    </div>
+                    <div class="project even-project">
+                        <div class="thumbnail">
+                            <img class="thumbnail-project" src="../asset/thumbnail/Project_CBIR.webp" alt="Image Retrieval System"/>
+                        </div>
+                        <div class="project-detail">
+                            <p class="project-title">Application of Vector Algebra in Image Retrieval Systems</p>
+                            <p>Tech Used</p>
+                            <div class="tech-used-icons">
+                                <div>
+                                    <img src="../asset/img/django.webp" alt="python"/>
+                                </div>
+                                <div>
+                                    <img src="../asset/img/css3.webp" alt="python"/>
+                                </div>
+                                <div>
+                                    <img src="../asset/img/python.webp" alt="python"/>
+                                </div>
+                            </div>
+                            <a class="button-view-project" href="https://github.com/Zechtro/Tucil1_13522103">View Repo</a>
+                        </div>
+                    </div>
+                    <div class="project odd-project">
+                        <div class="thumbnail">
+                            <img class="thumbnail-project" src="../asset/thumbnail/Project_WordLadder.webp" alt="Word Ladder"/>
+                        </div>
+                        <div class="project-detail">
+                            <p class="project-title">Word Ladder</p>
+                            <p>Tech Used</p>
+                            <div class="tech-used-icons">
+                                <div>
+                                    <img src="../asset/img/java.webp" alt="python"/>
+                                </div>
+                            </div>
+                            <a class="button-view-project" href="https://github.com/Zechtro/Tucil3_13522103">View Repo</a>
+                        </div>
+                    </div>
+
                 </div>
             </section> 
 
-            <!-- Contact -->
-            <section id="contact" class="container-section">
-                <header>
-                    <h2>Contact</h2>
-                </header>
-                <div class="container-content">
-                    <p>
-                        zzzz
-                    </p>
-                </div>
-            </section>
             <footer>
+                <div class="contact">
+                    <div>
+                        <a href="https://github.com/Zechtro">
+                            <img src="../asset/img/github.webp" alt="github: Zechtro"/>
+                            Zechtro
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/st.v.n_cia/">
+                            <img src="../asset/img/instagram.webp" alt="instagram: @st.v.n_cia"/>
+                            @st.v.n_cia
+                        </a>
+                    </div>
+                    <div>
+                        <img src="../asset/img/email.webp" alt="email: stjhia5.ss@gmail.com"/>
+                        stjhia5.ss@gmail.com
+                    </div>
+                </div>
                 <p>&copy; 2024 Steven Tjhia</p>
             </footer>
         </main> 
